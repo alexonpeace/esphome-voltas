@@ -1,7 +1,7 @@
 name: voltas_climate
 version: "1.0.0"
 files:
-  - __init__.py          # ← add this line
+  - climate.py          # ← add this line
   - voltas_climate.h
 dependencies:
   esphome: ">=2025.2.0"
