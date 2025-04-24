@@ -12,7 +12,10 @@ class VoltasClimate : public Component, public climate::Climate {
   explicit VoltasClimate(uint16_t tx_pin)      // tx_pin supplied from YAML
       : tx_pin_(tx_pin), ir_(tx_pin) {}
 
-  void setup() override { ir_.begin(); }
+  void setup() override {
+    ir_.begin();
+    publish_state();        // ← add this
+  }
   void loop()  override {}                         // nothing periodic
 
   // -------- advertised features --------
