@@ -1,0 +1,8 @@
+name: voltas_climate
+version: "1.0.0"
+description: "Voltas IR Climate for ESPHome"
+files:
+  - voltas_climate.h
+  - voltas_climate.cpp
+dependencies:
+  esphome: ">=2025.2.0"
