@@ -1,7 +1,10 @@
 name: voltas_climate
 version: "1.0.0"
 files:
-  - climate.py          # ← add this line
+  - __init__.py
+  - climate.py
   - voltas_climate.h
 dependencies:
   esphome: ">=2025.2.0"
+libraries:
+  - IRremoteESP8266          # ← pulls the library from PlatformIO registry
