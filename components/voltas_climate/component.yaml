@@ -7,4 +7,4 @@ files:
 dependencies:
   esphome: ">=2025.2.0"
 libraries:
-  - IRremoteESP8266          # ← pulls the library from PlatformIO registry
+  - "IRremoteESP8266@^2.8.6"      # ← add this line (correct indent)
