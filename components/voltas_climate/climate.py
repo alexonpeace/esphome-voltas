@@ -6,12 +6,13 @@ from esphome.const import CONF_ID, CONF_TX_PIN
 DEPENDENCIES = ["remote_transmitter"]
 
 voltas_ns = cg.esphome_ns.namespace("voltas")
-VoltasClimate = voltas_ns.class_("VoltasClimate", climate.Climate, cg.Component)
+VoltasClimate = voltas_ns.class_("VoltasClimate",
+                                 climate.Climate, cg.Component)
 
 CONFIG_SCHEMA = climate.CLIMATE_SCHEMA.extend(
     {
         cv.GenerateID(): cv.declare_id(VoltasClimate),
-        cv.Required(CONF_TX_PIN): cv.templatable(cv.uint16_t),
+        cv.Required(CONF_TX_PIN): cv.uint16_t,
     }
 ).extend(cv.COMPONENT_SCHEMA)
 
